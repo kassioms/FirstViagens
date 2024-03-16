@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;500&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  height: calc(100vh - 150px);
+  background: no-repeat center/cover url('/assets/bgh.jpg');
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  color: #fff;
+}
+header nav p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  transition: text-shadow .6s ;
+}
+header nav p:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin: 0 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: #f56c11;
+  transition: .4s;
+}
+.header-content {
+  color: #fff;
+  font-weight: bold;
+  max-width: 400px;
+  margin: 150px auto;
+  text-align: center;
+  animation: ease 3s text-move forwards;
+}
+@keyframes text-move{
+  from{
+    transform: translateY(0px);
+    opacity:0;
+  }
+  to{
+    transform: translateY(-60px);
+    opacity:1;
+  }
+}
+.header-content h1 {
+  margin-bottom: 10px;
+  font-size: 64px;
+}
+.header-content button{
+  background-color: #f87c07;
+  padding: 15px;
+  border-radius: 15px 0 15px 0;
+  color: white;
+  font-size: 1.2em;
+}
+.header-content button:hover{
+  background-color: blue;
+  cursor: pointer;
+}
+.pacotes{
+  background-color: #ebe7e75d;
+  padding: 25px;
+}
+.pacotes-title{
+  width: 100%;
+  text-align: center;
+}
+.pacotes .pacotes-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pacotes-cards .card{
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  margin: 25px;
+  border-radius: 15px 0;
+  position: relative;
+}
+.pacotes-cards .card img{
+  object-fit: cover;
+  width: 250px;
+  height: 200px;
+}
+.card .card-top{
+  position: absolute;
+  right: 0;
+  background-color: #f56c11;
+  color: white;
+  border-radius: 0 0 0 8px;
+  padding: 2px;
+  box-shadow: 1px 2px 5px -2px #222;
+}
+.card .card-bottom{
+  position: absolute;
+  top: 160px;
+  background-color: blue;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  padding: 2px;
+  box-shadow: 1px 2px 5px -2px #222;
+}
+.card-content{
+  list-style: none;
+  margin: 10px;
+}
+.servicos{
+  padding: 15px;
+}
+
+.servicos .servicos-title{
+  text-align: center;
+  margin: 25px;
+}
+.servicos .servicos-card{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 35px 0;
+}
+.servicos .card{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.servicos .card img{
+  width: 50px;
+}
+.servicos .card h3{
+  font-weight: bold;
+}
+.servicos .card p{
+  text-align: center;
+  color: gray;
+  font-size: 12pt;
+}
+.servicos .card .button-servicos{
+  background-color: #f87c07;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12pt;
+}
+.servicos .card .button-servicos:hover{
+  cursor: pointer;
+  background-color: blue;
+  transform: scale(1.1);
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  background-color: rgb(249, 245, 245);
+  padding: 5px;
+}
+
+@media (max-width: 767px) {
+  header nav ul{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #f56c11;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 55px;
+  }
+}
